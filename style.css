@@ -471,8 +471,8 @@ h4 {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    z-index: 2;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .project-card__visual::after {

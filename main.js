@@ -169,9 +169,9 @@ function renderProjects() {
 
         const card = `
             <article class="project-card reveal" style="transition-delay: ${delay}ms;">
+                <div class="project-card__badge">${project.badge}</div>
                 <div class="project-card__visual">
                     <img src="${imgSrc}" class="project-image" />
-                    <div class="project-card__badge">${project.badge}</div>
                 </div>
                 <div class="project-card__content">
                     <div class="project-card__sector">${project.sector}</div>
