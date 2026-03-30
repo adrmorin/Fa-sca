@@ -285,6 +285,8 @@ select {
 }
 
 .hero-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--bg-panel);
@@ -330,10 +332,13 @@ select {
 }
 
 .hero-card--image img {
-  width: 100%;
-  height: 100%;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  margin: -1px;
+  min-height: inherit;
   object-fit: cover;
-  transform: scale(1.02);
+  object-position: center;
+  display: block;
 }
 
 .hero-card--image-alt {
@@ -369,10 +374,12 @@ select {
 .value-card,
 .timeline-card,
 .pack-card {
+  position: relative;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--bg-panel);
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .intro-card,
@@ -477,15 +484,22 @@ select {
 }
 
 .process-media img {
-  max-height: 420px;
+  width: calc(100% + 2px);
+  height: calc(420px + 2px);
+  margin: -1px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card-media {
-  margin: -24px -24px 18px;
-  width: calc(100% + 48px);
-  aspect-ratio: 4 / 3;
+  margin: -25px -25px 18px;
+  width: calc(100% + 50px);
+  max-width: none;
+  aspect-ratio: 16 / 10;
   border-bottom: 1px solid var(--line);
   transition: transform 400ms ease;
+  object-fit: cover;
+  object-position: center;
 }
 
 .info-card:hover .card-media,
